@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package demo.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "demo/api/demo/v1;v1";
+option java_multiple_files = true;
+option java_outer_classname = "DemoProtoV1";
+option java_package = "demo.v1";
+
+// The greeting service definition.
+service GreeterService {
+  // Sends a greeting
+  rpc SayHello(SayHelloRequest) returns (SayHelloResponse) {
+    option (google.api.http) = {
+      post: "/demo/{name}"
+      body: "*"
+    };
+  }
+}
+
+// The request message containing the user's name.
+message SayHelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message SayHelloResponse {
+  string message = 1;
+  int64 ts = 2;
+}
