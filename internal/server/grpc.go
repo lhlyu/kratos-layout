@@ -6,10 +6,11 @@ import (
 	"kratos-layout/internal/service"
 
 	"github.com/go-kratos/kratos/v2/log"
-	"github.com/go-kratos/kratos/v2/middleware/logging"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	"github.com/go-kratos/kratos/v2/middleware/tracing"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
+	"github.com/lhlyu/kratos-easy/middlewares/logging"
+	"github.com/lhlyu/kratos-easy/middlewares/validate"
 )
 
 // NewGRPCServer new a gRPC server.
@@ -17,9 +18,10 @@ func NewGRPCServer(c *conf.Conf, logger log.Logger, greeter *service.GreeterServ
 
 	var opts = []grpc.ServerOption{
 		grpc.Middleware(
-			tracing.Server(),
 			recovery.Recovery(),
+			tracing.Server(),
 			logging.Server(logger),
+			validate.ProtoValidate(),
 		),
 	}
 	if c.Server.Grpc.Network != "" {

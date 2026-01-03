@@ -1,5 +1,11 @@
-###
+### 错误
 POST localhost:8000/demo/jack
 Content-Type: application/json
 
 {"age": 1}
+
+### 正常
+POST localhost:8000/demo/jack2
+Content-Type: application/json
+
+{"age": 12}

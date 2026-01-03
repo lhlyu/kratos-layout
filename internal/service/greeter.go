@@ -7,6 +7,8 @@ import (
 	"time"
 
 	"kratos-layout/internal/biz"
+
+	"github.com/google/uuid"
 )
 
 // GreeterService is a greeter service.
@@ -30,5 +32,10 @@ func (s *GreeterService) SayHello(ctx context.Context, in *v1.SayHelloRequest) (
 	if in.Name == "jack" {
 		return nil, errors.New("错误信息")
 	}
-	return &v1.SayHelloResponse{Message: "Hello " + g.Hello, Ts: time.Now().UnixMilli()}, nil
+	uuids := make([]string, 0)
+	for range 200 {
+		uuids = append(uuids, uuid.New().String())
+	}
+
+	return &v1.SayHelloResponse{Message: "Hello " + g.Hello, CreatedAt: time.Now().UnixMilli(), Uuids: uuids}, nil
 }

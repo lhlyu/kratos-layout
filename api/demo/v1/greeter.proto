@@ -3,6 +3,7 @@ syntax = "proto3";
 package demo.v1;
 
 import "google/api/annotations.proto";
+import "buf/validate/validate.proto";
 
 option go_package = "demo/api/demo/v1;v1";
 option java_multiple_files = true;
@@ -23,10 +24,13 @@ service GreeterService {
 // The request message containing the user's name.
 message SayHelloRequest {
   string name = 1;
+
+  int64 age = 2 [(buf.validate.field).int64 = {gt: 10}];
 }
 
 // The response message containing the greetings
 message SayHelloResponse {
   string message = 1;
-  int64 ts = 2;
+  int64 created_at = 2;
+  repeated string uuids = 3;
 }
