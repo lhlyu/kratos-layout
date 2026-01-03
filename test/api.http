@@ -2,7 +2,7 @@
 POST localhost:8000/demo/jack
 Content-Type: application/json
 
-{"age": 1}
+{"age": 12}
 
 ### 正常
 POST localhost:8000/demo/jack2

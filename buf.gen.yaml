@@ -21,3 +21,9 @@ plugins:
   - local: protoc-gen-go-errors
     out: gen/go
     opt: paths=source_relative
+
+  - local: protoc-gen-openapi
+    out: gen/docs
+    opt: paths=source_relative
+    exclude_types:
+      - "conf"
