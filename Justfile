@@ -34,6 +34,7 @@ generate:
     @echo "Running go generate..."
     buf dep update
     buf generate
+    wire ./cmd/...
     go generate ./...
     go mod tidy
 
@@ -46,12 +47,12 @@ update:
 # 格式化代码
 format:
     buf format -w
-    go fmt ./internal/...
+    go fmt ./...
 
 # 检查代码
 check:
     buf lint
-    go vet ./internal/...
+    go vet ./...
 
 # 执行所有生成任务
 all: generate check
