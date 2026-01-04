@@ -10,6 +10,7 @@ option java_multiple_files = true;
 option java_outer_classname = "DemoProtoV1";
 option java_package = "demo.v1";
 
+
 // The greeting service definition.
 service GreeterService {
   // Sends a greeting
@@ -26,6 +27,8 @@ message SayHelloRequest {
   string name = 1;
 
   int64 age = 2 [(buf.validate.field).int64 = {gt: 10}];
+
+
 }
 
 // The response message containing the greetings

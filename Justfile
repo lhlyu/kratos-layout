@@ -6,15 +6,15 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 # 安装必要工具
 init:
-    go install github.com/bufbuild/buf/cmd/buf@latest
     go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
     go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
-    go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
     go install github.com/go-kratos/kratos/cmd/protoc-gen-go-http/v2@latest
-    go install github.com/google/gnostic/cmd/protoc-gen-openapi@latest
-    go install github.com/google/wire/cmd/wire@latest
     go install github.com/go-kratos/kratos/cmd/protoc-gen-go-errors/v2@latest
-    go install github.com/envoyproxy/protoc-gen-validate@latest
+    go install github.com/google/gnostic/cmd/protoc-gen-openapi@latest
+    go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
+    go install github.com/bufbuild/buf/cmd/buf@latest
+    go install github.com/google/wire/cmd/wire@latest
+    go install github.com/lhlyu/kratos-easy/cmd/ke@latest
 
 
 # 构建二进制
@@ -22,6 +22,10 @@ build:
     @echo "Building project..."
     mkdir -p bin
     go build -ldflags="-s -w" -o ./bin/server ./cmd/...
+
+# 生成 API proto，例如：just api demo
+api name:
+    ke api {{name}}
 
 # 生成代码 & tidy
 generate:

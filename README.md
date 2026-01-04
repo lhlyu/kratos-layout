@@ -15,6 +15,7 @@
 `just help`
 
 ```shell
+
 Usage:
   just <recipe>
 
@@ -22,6 +23,7 @@ Recipes:
 just --list
 Available recipes:
     all      # 执行所有生成任务
+    api name # 生成 API proto，例如：just api demo
     build    # 构建二进制
     check    # 检查代码
     format   # 格式化代码
