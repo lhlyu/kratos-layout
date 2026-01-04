@@ -16,6 +16,11 @@ plugins:
     opt:
       - paths=source_relative
 
+  - local: protoc-gen-go-errors
+    out: .
+    opt:
+      - paths=source_relative
+
   - local: protoc-gen-openapi
     out: .
     strategy: all
