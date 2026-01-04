@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 	"errors"
-	v1 "kratos-layout/gen/go/demo/v1"
+	v1 "kratos-layout/api/demo/v1"
 	"time"
 
 	"kratos-layout/internal/biz"

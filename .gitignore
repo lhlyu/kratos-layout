@@ -32,7 +32,6 @@ Thumbs.db
 *.log
 bin/
 dist/
-gen/
 
 # Develop tools
 .vscode/
@@ -40,3 +39,5 @@ gen/
 *.swp
 
 *.env
+*.pb.go
+openapi.yaml

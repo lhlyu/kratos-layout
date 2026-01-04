@@ -1,8 +1,8 @@
 package server
 
 import (
-	"kratos-layout/gen/go/conf"
-	v1 "kratos-layout/gen/go/demo/v1"
+	v1 "kratos-layout/api/demo/v1"
+	"kratos-layout/internal/conf"
 	"kratos-layout/internal/service"
 
 	"github.com/go-kratos/kratos/v2/log"

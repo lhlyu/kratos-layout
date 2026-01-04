@@ -2,8 +2,7 @@
 version: v2
 
 modules:
-  - path: api
-  - path: internal
+  - path: .
 
 deps:
   - buf.build/googleapis/googleapis

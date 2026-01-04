@@ -6,7 +6,7 @@
 
 ```shell
 # 使用当前仓库作为模板
-kratos new demo -c https://github.com/lhlyu/kratos-layout
+kratos new demo -r https://github.com/lhlyu/kratos-layout
 ```
 
 ## 开发
@@ -24,23 +24,22 @@ kratos new demo -c https://github.com/lhlyu/kratos-layout
 `just help`
 
 ```shell
-
 Usage:
   just <recipe>
 
 Recipes:
 just --list
 Available recipes:
-    all      # 执行所有生成任务
-    api name # 生成 API proto，例如：just api demo
-    build    # 构建二进制
-    check    # 检查代码
-    format   # 格式化代码
-    generate # 生成代码 & tidy
-    help     # 显示帮助
-    init     # 安装必要工具
-    run      # 运行项目
-    update   # 更新依赖
+    all                   # 执行所有生成任务
+    api name version="v1" # 生成 API proto，例如：just api demo [v1]
+    build                 # 构建二进制
+    check                 # 检查代码
+    format                # 格式化代码
+    generate              # 生成代码 & tidy
+    help                  # 显示帮助
+    init                  # 安装必要工具
+    run                   # 运行项目
+    update                # 更新依赖
 ```
 
 

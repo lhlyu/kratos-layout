@@ -9,8 +9,8 @@ package main
 import (
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
-	"kratos-layout/gen/go/conf"
 	"kratos-layout/internal/biz"
+	"kratos-layout/internal/conf"
 	"kratos-layout/internal/data"
 	"kratos-layout/internal/server"
 	"kratos-layout/internal/service"

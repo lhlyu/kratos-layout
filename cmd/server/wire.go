@@ -6,8 +6,8 @@
 package main
 
 import (
-	"kratos-layout/gen/go/conf"
 	"kratos-layout/internal/biz"
+	"kratos-layout/internal/conf"
 	"kratos-layout/internal/data"
 	"kratos-layout/internal/server"
 	"kratos-layout/internal/service"
