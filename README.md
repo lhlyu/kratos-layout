@@ -4,9 +4,8 @@
 
 > 如果已经安装工具或执行了`init`和`all`命令则跳过相关步骤
 
-- 安装 [buf](https://buf.build/docs/cli/installation/) 工具，用来管理 proto
 - 安装 [just](https://just.systems/man/zh/%E5%AE%89%E8%A3%85%E5%8C%85.html) 工具，用来编排命令
-- 执行命令 `just init`，安装一些开发工具
+- 执行命令 `just init`，安装必要开发工具
 - 执行命令 `just all`
 - 运行项目 `just run`
 

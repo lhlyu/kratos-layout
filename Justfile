@@ -6,6 +6,7 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 # 安装必要工具
 init:
+    go install github.com/bufbuild/buf/cmd/buf@latest
     go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
     go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
     go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
@@ -15,15 +16,8 @@ init:
     go install github.com/go-kratos/kratos/cmd/protoc-gen-go-errors/v2@latest
     go install github.com/envoyproxy/protoc-gen-validate@latest
 
-# 构建二进制
-[unix]
-build:
-    @echo "Building project..."
-    mkdir -p bin/
-    go build -ldflags="-s -w" -o ./bin/server ./cmd/...
 
 # 构建二进制
-[windows]
 build:
     @echo "Building project..."
     mkdir -p bin
