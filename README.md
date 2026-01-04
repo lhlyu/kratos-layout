@@ -1,5 +1,14 @@
 # Kratos Project Template
 
+## 快速创建项目
+
+- 项目是基于 go-kratos ，**必须**提前安装好 kratos 命令工具
+
+```shell
+# 使用当前仓库作为模板
+kratos new demo -c https://github.com/lhlyu/kratos-layout
+```
+
 ## 开发
 
 > 如果已经安装工具或执行了`init`和`all`命令则跳过相关步骤
