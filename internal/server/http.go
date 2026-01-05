@@ -10,6 +10,7 @@ import (
 	"github.com/go-kratos/kratos/v2/middleware/tracing"
 	"github.com/go-kratos/kratos/v2/transport/http"
 	"github.com/lhlyu/kratos-easy/httpx"
+	"github.com/lhlyu/kratos-easy/middlewares/header"
 	"github.com/lhlyu/kratos-easy/middlewares/logging"
 	"github.com/lhlyu/kratos-easy/middlewares/validate"
 )
@@ -23,6 +24,7 @@ func NewHTTPServer(c *conf.Conf, logger log.Logger, greeter *service.GreeterServ
 			tracing.Server(),
 			logging.Server(logger),
 			validate.ProtoValidate(),
+			header.Header(),
 		),
 		http.ResponseEncoder(httpx.EncodeResponse),
 		http.ErrorEncoder(httpx.EncodeError),
