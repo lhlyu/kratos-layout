@@ -38,6 +38,7 @@ dist/
 .idea/
 *.swp
 
+*.local.yaml
 *.env
 *.pb.go
 openapi.yaml

@@ -23,9 +23,9 @@ build:
     mkdir -p bin
     go build -ldflags="-s -w" -o ./bin/server ./cmd/...
 
-# 生成 API proto，例如：just api demo [v1]
-api name version="v1":
-    ke api {{name}} {{version}}
+# 生成 API proto，例如：just api demo [v1] [protoName]
+api name version="v1" protoName="":
+    ke api {{name}} {{version}} {{protoName}}
 
 # 生成代码 & tidy
 generate:
