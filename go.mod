@@ -7,7 +7,7 @@ require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/google/uuid v1.6.0
 	github.com/google/wire v0.7.0
-	github.com/lhlyu/kratos-easy v0.0.10
+	github.com/lhlyu/kratos-easy v0.0.11
 	go.uber.org/automaxprocs v1.6.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20260112192933-99fd39fd28a9
 	google.golang.org/grpc v1.78.0
